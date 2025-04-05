@@ -128,7 +128,6 @@ body {
   .a {
     grid-column: 1;
     grid-row: 1;
-    align-self: center; /* Центрируем A по вертикали */
   }
   .b {
     grid-column: 1;
@@ -141,13 +140,10 @@ body {
   .d {
     grid-column: 2;
     grid-row: 2;
-    align-self: center; /* Центрируем D по вертикали */
   }
 
   .card img {
-    position: absolute; /* Позиционирование изображения */
     width: 4rem; /* Задайте нужный размер изображения */
-    height: auto; /* Чтобы сохранить пропорции */
     bottom: 2.5rem; /* Располагаем снизу */
     right: 2.5rem; /* Располагаем справа */
   }
@@ -158,9 +154,7 @@ body {
     font-size: 1.1rem;
   }
   .card img {
-    position: absolute; /* Позиционирование изображения */
     width: 3rem; /* Задайте нужный размер изображения */
-    height: auto; /* Чтобы сохранить пропорции */
     bottom: 4rem; /* Располагаем снизу */
     right: 2rem; /* Располагаем справа */
   }
@@ -195,7 +189,6 @@ body {
   .a {
     grid-column: 1;
     grid-row: 1;
-    align-self: center; /* Центрируем A по вертикали */
   }
   .b {
     grid-column: 1;
@@ -208,16 +201,13 @@ body {
   .d {
     grid-column: 1;
     grid-row: 4;
-    align-self: center; /* Центрируем D по вертикали */
   }
 
   .card {
     height: 30vh;
   }
   .card img {
-    position: absolute; /* Позиционирование изображения */
     width: 4rem; /* Задайте нужный размер изображения */
-    height: auto; /* Чтобы сохранить пропорции */
     bottom: 3rem; /* Располагаем снизу */
     right: 3rem; /* Располагаем справа */
   }
