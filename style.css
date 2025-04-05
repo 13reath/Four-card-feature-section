@@ -1,0 +1,224 @@
+:root {
+  /* Primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --grey-500: hsl(234, 12%, 34%);
+  --grey-400: hsl(212, 6%, 44%);
+  --white: hsl(0, 0%, 100%);
+  --white-bg: #fafafa;
+
+  /* Typography */
+  --font-size-body: 15px;
+  --font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-body);
+  font-family: var(--font-family);
+  place-items: center; /* Центрируем содержимое по горизонтали и вертикали */
+  background-color: var(--white-bg);
+  padding: 5rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading span {
+  font-size: 2rem;
+  color: var(--grey-400);
+  font-weight: 200;
+}
+
+.heading h1 {
+  font-size: 2rem;
+  color: var(--grey-500);
+}
+
+.heading p {
+  padding: 1rem 0 3rem 0;
+  color: var(--grey-400);
+  max-width: 35rem;
+  width: 100%;
+  font-weight: 600;
+}
+
+.deck {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  padding: 1rem;
+  box-sizing: border-box; /* Чтобы padding не увеличивал размер */
+  background-color: var(--white);
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  padding: 1rem;
+}
+
+.card p {
+  max-width: 80%;
+  padding-left: 1rem;
+  color: var(--grey-400);
+}
+
+.card img {
+  position: absolute; /* Позиционирование изображения */
+  bottom: 3rem; /* Располагаем снизу */
+  right: 3rem; /* Располагаем справа */
+  width: 5rem; /* Задайте нужный размер изображения */
+  height: auto; /* Чтобы сохранить пропорции */
+}
+
+.a {
+  border-top: 0.4rem solid var(--cyan);
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center; /* Центрируем A по вертикали */
+}
+.b {
+  border-top: 0.4rem solid var(--red);
+  grid-column: 2;
+  grid-row: 1;
+}
+.c {
+  border-top: 0.4rem solid var(--orange);
+  grid-column: 2;
+  grid-row: 2;
+}
+.d {
+  border-top: 0.4rem solid var(--blue);
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: center; /* Центрируем D по вертикали */
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 4rem;
+  }
+
+  .deck {
+    grid-gap: 2rem;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+  }
+
+  .a {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center; /* Центрируем A по вертикали */
+  }
+  .b {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .c {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .d {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center; /* Центрируем D по вертикали */
+  }
+
+  .card img {
+    position: absolute; /* Позиционирование изображения */
+    width: 4rem; /* Задайте нужный размер изображения */
+    height: auto; /* Чтобы сохранить пропорции */
+    bottom: 2.5rem; /* Располагаем снизу */
+    right: 2.5rem; /* Располагаем справа */
+  }
+}
+
+@media (max-width: 650px) {
+  .card h2 {
+    font-size: 1.1rem;
+  }
+  .card img {
+    position: absolute; /* Позиционирование изображения */
+    width: 3rem; /* Задайте нужный размер изображения */
+    height: auto; /* Чтобы сохранить пропорции */
+    bottom: 4rem; /* Располагаем снизу */
+    right: 2rem; /* Располагаем справа */
+  }
+
+  .card p {
+    max-width: 80%;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    color: var(--grey-400);
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 2rem;
+  }
+  .heading span,
+  .heading h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading p {
+    font-weight: 400;
+  }
+
+  .deck {
+    grid-gap: 2rem;
+    grid-template-columns: 90%;
+    justify-content: center;
+  }
+
+  .a {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center; /* Центрируем A по вертикали */
+  }
+  .b {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .c {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .d {
+    grid-column: 1;
+    grid-row: 4;
+    align-self: center; /* Центрируем D по вертикали */
+  }
+
+  .card {
+    height: 30vh;
+  }
+  .card img {
+    position: absolute; /* Позиционирование изображения */
+    width: 4rem; /* Задайте нужный размер изображения */
+    height: auto; /* Чтобы сохранить пропорции */
+    bottom: 3rem; /* Располагаем снизу */
+    right: 3rem; /* Располагаем справа */
+  }
+}
